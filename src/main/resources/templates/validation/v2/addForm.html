@@ -27,7 +27,7 @@
     <form action="item.html" th:action th:object="${item}" method="post">
         <!-- #fields로 BindingResult가 제공하는 검증 오류에 접근할 수 있다. -->
         <div th:if="${#fields.hasGlobalErrors()}">
-            <p class="field-error" th:each="err: ${#fields.globalErrors()}" th:text="${err}">전체 오류 메시지</p>
+            <p class="field-error" th:each="err: ${#fields.globalErrors()}" th:text="${err}">글로벌 오류 메시지</p>
         </div>
 
         <div>
